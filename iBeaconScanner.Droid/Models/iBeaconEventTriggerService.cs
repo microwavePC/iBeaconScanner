@@ -2,12 +2,9 @@
 using System.Collections.Generic;
 using Android.Bluetooth;
 using Android.Bluetooth.LE;
-using iBeaconScanner.Droid.Models;
 using iBeaconScanner.Models;
 using Prism.Mvvm;
-using Xamarin.Forms;
 
-[assembly: Dependency(typeof(iBeaconEventTriggerService))]
 namespace iBeaconScanner.Droid.Models
 {
 	public class iBeaconEventTriggerService : BindableBase, IiBeaconEventTriggerService

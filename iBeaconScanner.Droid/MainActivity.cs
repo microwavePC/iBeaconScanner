@@ -9,6 +9,8 @@ using Android.Widget;
 using Android.OS;
 using Microsoft.Practices.Unity;
 using Prism.Unity;
+using iBeaconScanner.Models;
+using iBeaconScanner.Droid.Models;
 
 namespace iBeaconScanner.Droid
 {
@@ -29,7 +31,7 @@ namespace iBeaconScanner.Droid
 	{
 		public void RegisterTypes(IUnityContainer container)
 		{
-
+			container.RegisterType<IiBeaconEventTriggerService, iBeaconEventTriggerService>(new ContainerControlledLifetimeManager());
 		}
 	}
 }

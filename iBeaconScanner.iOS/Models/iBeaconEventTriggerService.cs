@@ -2,13 +2,10 @@
 using System.Collections.Generic;
 using CoreLocation;
 using Foundation;
-using iBeaconScanner.iOS.Models;
 using iBeaconScanner.Models;
 using Prism.Mvvm;
 using UIKit;
-using Xamarin.Forms;
 
-[assembly: Dependency(typeof(iBeaconEventTriggerService))]
 namespace iBeaconScanner.iOS.Models
 {
 	public class iBeaconEventTriggerService : BindableBase, IiBeaconEventTriggerService

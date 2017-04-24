@@ -11,7 +11,7 @@
 			<Style x:Key="ButtonStyle" TargetType="Button">
 				<Setter Property="BorderColor" Value="Silver"/>
 				<Setter Property="BorderWidth" Value="1"/>
-				<Setter Property="Margin" Value="1,1,1,1"/>
+				<Setter Property="Margin" Value="1"/>
 				<Setter Property="HorizontalOptions" Value="FillAndExpand"/>
 				<Setter Property="VerticalOptions" Value="FillAndExpand"/>
 			</Style>
@@ -33,16 +33,16 @@
 			</Grid.Margin>
 
 			<Grid.RowDefinitions>
-				<RowDefinition Height="1*"/>
-				<RowDefinition Height="1*"/>
-				<RowDefinition Height="1*"/>
-				<RowDefinition Height="1*"/>
-				<RowDefinition Height="1*"/>
-				<RowDefinition Height="1*"/>
-				<RowDefinition Height="1*"/>
-				<RowDefinition Height="1*"/>
-				<RowDefinition Height="1*"/>
-				<RowDefinition Height="1*"/>
+				<RowDefinition/>
+				<RowDefinition/>
+				<RowDefinition/>
+				<RowDefinition/>
+				<RowDefinition/>
+				<RowDefinition/>
+				<RowDefinition/>
+				<RowDefinition/>
+				<RowDefinition/>
+				<RowDefinition/>
 			</Grid.RowDefinitions>
 
 			<!-- スキャン実行状況表示欄 -->
@@ -55,8 +55,8 @@
 			<!-- UUID設定 -->
 			<Grid Grid.Row="1">
 				<Grid.RowDefinitions>
-					<RowDefinition Height="1*"/>
-					<RowDefinition Height="1*"/>
+					<RowDefinition/>
+					<RowDefinition/>
 				</Grid.RowDefinitions>
 				<Label Grid.Row="0" Text="UUID"
 					   Style="{StaticResource LabelStyle}"/>
@@ -66,8 +66,8 @@
 			<!-- MAJOR設定 -->
 			<Grid Grid.Row="2">
 				<Grid.RowDefinitions>
-					<RowDefinition Height="1*"/>
-					<RowDefinition Height="1*"/>
+					<RowDefinition/>
+					<RowDefinition/>
 				</Grid.RowDefinitions>
 				<Label Grid.Row="0" Text="MAJOR"
 					   Style="{StaticResource LabelStyle}"/>
@@ -77,8 +77,8 @@
 			<!-- MINOR設定 -->
 			<Grid Grid.Row="3">
 				<Grid.RowDefinitions>
-					<RowDefinition Height="1*"/>
-					<RowDefinition Height="1*"/>
+					<RowDefinition/>
+					<RowDefinition/>
 				</Grid.RowDefinitions>
 				<Label Grid.Row="0" Text="MINOR"
 					   Style="{StaticResource LabelStyle}"/>
@@ -88,8 +88,8 @@
 			<!-- 下限RSSI設定 -->
 			<Grid Grid.Row="4">
 				<Grid.RowDefinitions>
-					<RowDefinition Height="1*"/>
-					<RowDefinition Height="1*"/>
+					<RowDefinition/>
+					<RowDefinition/>
 				</Grid.RowDefinitions>
 				<Label Grid.Row="0"
 					   Text="{Binding ThresholdRssi, StringFormat='イベント発火の最低RSSI：{0:N0}'}"
@@ -97,7 +97,7 @@
 				<Slider Grid.Row="1" Minimum="-100" Maximum="-30" Value="{Binding ThresholdRssi}">
 					<Slider.Margin>
 						<OnPlatform x:TypeArguments="Thickness"
-									iOS="0,0,0,0"
+									iOS="0"
 									Android="-10,5,-10,0" />
 					</Slider.Margin>
 				</Slider>
@@ -106,8 +106,8 @@
 			<!-- 実行間隔設定 -->
 			<Grid Grid.Row="5">
 				<Grid.RowDefinitions>
-					<RowDefinition Height="1*"/>
-					<RowDefinition Height="1*"/>
+					<RowDefinition/>
+					<RowDefinition/>
 				</Grid.RowDefinitions>
 				<Label Grid.Row="0"
 					   Text="{Binding TimeIntervalSec, StringFormat='イベント再発火までの時間：{0:N0}秒'}"
@@ -115,7 +115,7 @@
 				<Slider Grid.Row="1" Maximum="60" Minimum="1" Value="{Binding TimeIntervalSec}">
 					<Slider.Margin>
 						<OnPlatform x:TypeArguments="Thickness"
-									iOS="0,0,0,0"
+									iOS="0"
 									Android="-10,5,-10,0" />
 					</Slider.Margin>
 				</Slider>
@@ -124,8 +124,8 @@
 			<!-- イベント設定 -->
 			<Grid Grid.Row="6">
 				<Grid.RowDefinitions>
-					<RowDefinition Height="1*"/>
-					<RowDefinition Height="1*"/>
+					<RowDefinition/>
+					<RowDefinition/>
 				</Grid.RowDefinitions>
 				<Label Grid.Row="0" Text="イベントの種類"
 					   Style="{StaticResource LabelStyle}"/>
@@ -141,8 +141,8 @@
 			<!-- イベント追加ボタン & イベント全削除ボタン -->
 			<Grid Grid.Row="8">
 				<Grid.ColumnDefinitions>
-					<ColumnDefinition Width="1*"/>
-					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition/>
+					<ColumnDefinition/>
 				</Grid.ColumnDefinitions>
 				<Button Grid.Column="0" Text="イベント追加"
 						Style="{StaticResource ButtonStyle}"
@@ -155,8 +155,8 @@
 			<!-- スキャン開始ボタン & スキャン停止ボタン -->
 			<Grid Grid.Row="9">
 				<Grid.ColumnDefinitions>
-					<ColumnDefinition Width="1*"/>
-					<ColumnDefinition Width="1*"/>
+					<ColumnDefinition/>
+					<ColumnDefinition/>
 				</Grid.ColumnDefinitions>
 				<Button Grid.Column="0" Text="スキャン開始"
 						Style="{StaticResource ButtonStyle}"

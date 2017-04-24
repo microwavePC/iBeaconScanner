@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 
 using Foundation;
+using iBeaconScanner.iOS.Models;
+using iBeaconScanner.Models;
 using Microsoft.Practices.Unity;
 using Prism.Unity;
 using UIKit;
@@ -36,7 +38,7 @@ namespace iBeaconScanner.iOS
 	{
 		public void RegisterTypes(IUnityContainer container)
 		{
-
+			container.RegisterType<IiBeaconEventTriggerService, iBeaconEventTriggerService>(new ContainerControlledLifetimeManager());
 		}
 	}
 }
